@@ -4,6 +4,10 @@
     box-sizing: border-box 
 }
 
+*:focus {
+      outline: none;
+     }
+
 
 html, body {
     width: 100%;
@@ -59,7 +63,7 @@ body {
       width: 100%;
       padding: 20px;
       height: 33.31%;
-      box-shadow: 0 5px 5px rgb(63, 61, 61);
+      box-shadow: 1px 5px 5px rgb(196, 192, 192);
       position: relative;
 }
 
@@ -68,15 +72,28 @@ label, input {
       display: block;
 }
 
+input:focus, input:active {
+      border: 1px solid blue;
+      box-shadow: 1px 4px 4px;
+}
+
+input:invalid:not(:placeholder-shown){
+      border-color: red;
+}
+
 .input {
-    margin: 10px 20px 20px 0;
+    margin: 10px 20px 40px 0;
     border-radius: 5px;
     padding: 5px;
+    border: 1px solid grey;
 }
+
 
 #submit {
     margin: 10px 20px 20px 0;
-    padding: 5px;
+    padding: 10px;
+    background-color: rgb(140, 169, 196);
+    border: 1px solid grey;
     border-radius: 3px;
 }
 
