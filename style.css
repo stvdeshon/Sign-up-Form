@@ -10,25 +10,23 @@
 
 
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
   }
 
-body {
-      display: flex;
-}
-
 #banner {
+      display: flex;
       background-image: url(./maximalfocus.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       width: 30vw;
       position: relative;
+      height: max(100%, 800px)
 }
 
 #logo {
-    position: absolute;
-    height: 10vh;
+    height: max(10vh, 100px);
     width: 100%;
     background-color: rgb(39, 34, 39);
     opacity: .9;
@@ -37,6 +35,7 @@ body {
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: center center;
+    margin-top: 20vh;
 }
 
 #banner > p {
@@ -44,9 +43,11 @@ body {
     color: rgb(201, 201, 39);
     font-size: 1rem;
     text-align: center;
+
     position: absolute;
     bottom: 5px;
     left: 25%;
+
 }
 
 #right {
@@ -55,16 +56,30 @@ body {
       width: 70vw;
 }
 
-#form {
-      display: flex;
-      /* flex-direction: column; */
-      /* justify-content: center; */
-      align-items: center;
+#top, #form, #bottom {
+      height: max(33.31%, 400px);
       width: 100%;
       padding: 20px;
-      height: 33.31%;
+} 
+
+#top, #bottom {
+      background-color: rgba(211, 211, 211, 0.253);
+}
+
+#top {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+}
+
+#bottom > p {
+      font-size: 1.2rem;
+}
+
+#form {
+      display: flex;
+      align-items: center;
       box-shadow: 1px 5px 5px rgb(196, 192, 192);
-      position: relative;
 }
 
 
@@ -82,10 +97,11 @@ input:invalid:not(:placeholder-shown){
 }
 
 .input {
-    margin: 10px 20px 40px 0;
+    margin: 10px 10px 10px 0;
     border-radius: 5px;
     padding: 5px;
     border: 1px solid grey;
+    overflow-y: auto;
 }
 
 
@@ -95,21 +111,4 @@ input:invalid:not(:placeholder-shown){
     background-color: rgb(140, 169, 196);
     border: 1px solid grey;
     border-radius: 3px;
-}
-
-#top, #bottom {
-      background-color: rgba(211, 211, 211, 0.253);
-      height: 33.3%;
-      width: 100%;
-      padding: 20px;
-}
-
-#top {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-}
-
-#bottom > p {
-      font-size: 1.2rem;
 }
